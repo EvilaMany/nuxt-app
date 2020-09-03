@@ -1,20 +1,10 @@
-# nuxt-app
+### Installation
 
-## Build Setup
+1. Install Docker
+2. Navigate to project folder from terminal and run:
+- docker build -t nuxt-auth-example .
+- docker run -p 5000:5000 nuxt-auth-example
+3. **Congratulations!** Navigate to http://172.17.0.2:5000 in your web browser
 
-```bash
-# install dependencies
-$ npm install
 
-# serve with hot reload at localhost:3000
-$ npm run dev
 
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
