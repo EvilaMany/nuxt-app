@@ -5,15 +5,25 @@
         <v-card>
           <v-card-title>Profile</v-card-title>
           <v-card-text>
-            <p>
-              Name: <span> {{ user.name }} </span>
-            </p>
-            <p>
-              Email: <span> {{ user.email }} </span>
-            </p>
-            <v-card-actions>
-              <v-btn @click="logout" primary large.block> Logout </v-btn>
-            </v-card-actions>
+            <v-row justify="space-between">
+              <div>
+                <v-img
+                  :src="user.avatar"
+                  class="avatar"
+                />
+              </div>
+              <div>
+                <p>
+                  Name: <span> {{ user.name }} </span>
+                </p>
+                <p>
+                  Email: <span> {{ user.email }} </span>
+                </p>
+                <v-card-actions>
+                  <v-btn @click="logout" primary large.block> Logout </v-btn>
+                </v-card-actions>
+              </div>
+            </v-row>
           </v-card-text>
         </v-card>
       </v-col>
@@ -43,3 +53,10 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+  .avatar {
+    width: 50px;
+    height: 50px;
+    margin: 0 20px 0 10px;
+  }
+</style>

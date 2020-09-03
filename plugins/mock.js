@@ -11,7 +11,8 @@ export default ({app: { $axios }}) => {
     let token = btoa(JSON.stringify({name: userName, email: data.email}))
     let user = {
       email: data.email,
-      name: userName
+      name: userName,
+      avatar: '/avatar.png'
     }
 
     return [200, { user, token }]
@@ -31,7 +32,8 @@ export default ({app: { $axios }}) => {
     return [200, {
       user: {
         email: user.email,
-        name: user.name
+        name: user.name,
+        avatar: '/avatar.png'
       }
     }]
   })
